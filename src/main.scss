@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --default: #e2e8f0;
+    --light: #f1f5f9;
+    --dark: #cbd5e1;
+    --text: #000;
+    --yellow: #ffbf00;
+  }
+}
+
 * {
-	@apply text-red-500;
+  user-select: none;
+  transition: background-color 0.5s ease;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: var(--yellow);
+  &:hover {
+    background-color: darken($color: #ffbf00, $amount: 5%);
+  }
+}
+
+body {
+  background-color: red;
+}
+
+.theme-dark {
+  --default: #43464a;
+  --light: #66696d;
+  --dark: #34373b;
+  --text: #fff;
+}
+
+div {
+  @apply text-text;
+}
+
+button {
+  @apply cursor-pointer;
 }
