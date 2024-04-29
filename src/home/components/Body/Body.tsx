@@ -1,7 +1,11 @@
-import React, { useMemo } from "react";
+import React, { Dispatch, SetStateAction, useMemo } from "react";
 import Card from "./Card";
+import { TypeContent, TypeContextMenu } from "../../types";
 
-export default function Body() {
+export default function Body(props: {
+  contextMenu: TypeContextMenu;
+  setContextMenu: Dispatch<SetStateAction<TypeContextMenu>>;
+}) {
   const data = [
     "10",
     "11",
@@ -27,12 +31,21 @@ export default function Body() {
     "#fff",
     "red",
     "#43464a",
+    "https://youtube.com/",
   ];
   const memoizedData = useMemo(() => data, [data]);
   return (
-    <div className="flex-grow flex flex-col items-center overflow-y-auto">
+    <div
+      onScroll={() => props.setContextMenu({ type: "", x: 0, y: 0 })}
+      className="flex-grow flex flex-col items-center overflow-y-auto"
+    >
       {memoizedData.map((item) => (
-        <Card key={item} content={item} />
+        <Card
+          key={item}
+          card={{ content: item }}
+          contextMenu={props.contextMenu}
+          setContextMenu={props.setContextMenu}
+        />
       ))}
     </div>
   );

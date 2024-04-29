@@ -13,14 +13,12 @@
       {
         "label": "main",
         "title": "ClipMate",
-        "minWidth": 350,
-        "minHeight": 500,
         "width": 350,
         "height": 500,
         "url": "src/main.html",
         "decorations": false,
         "alwaysOnTop": true,
-        "resizable": true,
+        "resizable": false,
         "visible": false,
         "skipTaskbar": false
       }

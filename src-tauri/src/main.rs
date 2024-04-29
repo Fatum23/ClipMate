@@ -5,7 +5,7 @@ use tauri::{
     image::Image,
     menu::{MenuBuilder, MenuItemBuilder},
     tray::{ClickType, TrayIconBuilder},
-    AppHandle, LogicalSize, Manager, PhysicalPosition,
+    AppHandle, Manager, PhysicalPosition,
 };
 
 #[tauri::command]
@@ -23,10 +23,7 @@ fn toggle_window(app: AppHandle) {
             })
             .unwrap();
         }
-        let _ = win.as_ref().window().set_size(LogicalSize {
-            width: 350,
-            height: 500,
-        });
+
         let _ = win.as_ref().window().show();
     }
 }
