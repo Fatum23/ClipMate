@@ -1,4 +1,3 @@
-import React from "react";
 import ThemePicker from "./ThemePicker";
 import { IoMdSettings } from "react-icons/io";
 

@@ -15,7 +15,7 @@
         "title": "ClipMate",
         "width": 350,
         "height": 500,
-        "url": "src/main.html",
+        "url": "src/app/main.html",
         "decorations": false,
         "alwaysOnTop": true,
         "resizable": false,

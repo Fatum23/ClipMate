@@ -52,6 +52,9 @@ fn main() {
                 .build(app)?;
 
             toggle_window(app.app_handle().clone());
+
+            let win = app.get_webview_window("main").unwrap();
+            win.open_devtools();
             Ok(())
         })
         .on_window_event(|window, event| match event {

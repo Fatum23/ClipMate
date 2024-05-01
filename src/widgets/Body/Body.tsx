@@ -1,6 +1,6 @@
-import React, { Dispatch, SetStateAction, useMemo } from "react";
-import Card from "./Card";
-import { TypeContent, TypeContextMenu } from "../../types";
+import { Dispatch, SetStateAction, useMemo } from "react";
+import { Card } from "@entities";
+import { TypeContextMenu } from "@types";
 
 export default function Body(props: {
   contextMenu: TypeContextMenu;

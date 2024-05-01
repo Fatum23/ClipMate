@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Header from "./components/Header/Header";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Body from "./components/Body/Body";
-import ContextMenu from "./components/ContextMenu/ContextMenu";
-import { TypeContent, TypeContextMenu } from "./types";
+import { useState } from "react";
+import Header from "../widgets/Header/Header";
+import Sidebar from "../widgets/Sidebar/Sidebar";
+import Body from "../widgets/Body/Body";
+import { TypeContextMenu } from "@types";
+import { ContextMenu } from "@features";
 
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState("");

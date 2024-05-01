@@ -1,9 +1,9 @@
 import moment from "moment";
-import React, { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { IoIosMore } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
-import { TypeContextMenu } from "../../types";
-import { getContentType } from "../../../utils/getContentType";
+import { TypeContextMenu } from "@types";
+import { getContentType } from "@utils";
 
 type TypeCard = {
   content: string;
